@@ -30,7 +30,7 @@ class Database extends Config
         'username'     => 'admin',
         'password'     => '12345678',
         'database'     => 'umentor',
-        'DBDriver'     => 'MySQL',
+        'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
         'pConnect'     => false,
         'DBDebug'      => true,

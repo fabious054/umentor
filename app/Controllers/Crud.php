@@ -2,13 +2,16 @@
 
 namespace App\Controllers;
 
+use App\Models\CrudModel; 
+
 class Crud extends BaseController
 {
     public function index(): string
     {
-        $model = new \App\Models\CrudModel();
+        $model = new CrudModel();
         $data = $model->get();
-        var_dump($data);
-        return view('crud');
+        return view("crud", [
+            "data"=> $data
+            ]);
     }
 }

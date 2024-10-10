@@ -3,16 +3,16 @@
 namespace App\Models;
 
 use CodeIgniter\Model;
+use Config\Database;
 
 class CrudModel extends Model
 {
+     public $table = 'app_funcionarios';
+    
     public function get()
     {
-        return [
-            'name' => 'João',
-            'email' => ' email@email',
-            'phone' => '11 99999-9999'
-        ];
-
+         $builder = $this->db->table($this->table);
+         $query = $builder->get();
+         return $query->getResult();  
     }
 }

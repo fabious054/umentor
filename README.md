@@ -39,6 +39,15 @@ CREATE TABLE `app_funcionarios` (
   `ultima_atualizacao` date NULL
 ) COLLATE 'utf8mb3_general_ci';
 
+### Armazendo projeto no GitHub 
+[Umentor_GitHub](https://github.com/fabious054/umentor)
+- git init
+- git add .
+- git commit -m "primeiro commit projeto crud umentor"
+- git branch -M main
+- git remote add origin git@github.com:fabious054/umentor.git
+- git push -u origin main
+
 
 ## Como Executar o Projeto
 Siga os passos abaixo para executar o projeto em sua máquina local:

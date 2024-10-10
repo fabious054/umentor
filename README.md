@@ -18,10 +18,11 @@ Dentro da pasta `/public`, foram criados dois diretórios responsáveis pelos ar
 - **/public/css**: Para armazenar os arquivos CSS do projeto.
 
 ### Dependências Externas
-Na view **crud**, além dos arquivos CSS e JS próprios do projeto, também está sendo carregado o **jQuery** via CDN para utilização no frontend.
+Na view **crud**, além dos arquivos CSS e JS próprios do projeto, também está sendo carregado o **jQuery** via CDN e também o FontAwesome para icones. 
 
 
 ```html
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-KyZXEAg3QhqLMpG8r+8fhAXLRlI/hChmWw5r3HXbVRs=" crossorigin="anonymous"></script>
 ```
 

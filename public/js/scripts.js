@@ -4,7 +4,6 @@
 
  function jqueryTest(){
       console.log('JQuery está funcionando!');
-      $('h1').css('color','red');
    }
 
 

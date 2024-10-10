@@ -1,19 +1,32 @@
- function logExecute(){
-    console.log('Executando o script...');
- }
+const editar = () => {
+   $(".btnEditar").on("click", function (e) {
+      e.preventDefault();
+      let id = $(this).data("id");
+      alert("Editar el registro con el id: " + id);
+   });
+};
 
- function jqueryTest(){
-      console.log('JQuery está funcionando!');
-   }
+const deletar = () => {
+   $(".btnExcluir").on("click", function (e) {
+      e.preventDefault();
+      let id = $(this).data("id");
+      alert("btnExcluir el registro con el id: " + id);
+   });
+};
+
+const adicionar = () => {
+   $(".addFuncionario").on("click", function (e) {
+      e.preventDefault();
+      alert("Adicionar un nuevo registro");
+   });
+};
 
 
 
  function init() {
-   logExecute();
-   jqueryTest();
+   editar();
+   deletar();
+   adicionar();
 }
 
-// ==========================
-// Execução do Script
-// ==========================
 init();

@@ -39,8 +39,8 @@
                             <td><?php echo ($funcionario->criado_em) ? $funcionario->criado_em : date("d/m/Y")  ?></td>
                             <td><?php echo ($funcionario->ultima_atualizacao) ? $funcionario->ultima_atualizacao : date("d/m/Y")  ?></td>
                             <th>
-                                <button class="btnEditar"><i class="fa-solid fa-pen-to-square"></i></button>
-                                <button class="btnExcluir"><i class="fa-solid fa-trash"></i></button>
+                                <button data-id="<?php echo $funcionario->id ?>" class="btnEditar"><i class="fa-solid fa-pen-to-square"></i></button>
+                                <button data-id="<?php echo $funcionario->id ?>" class="btnExcluir"><i class="fa-solid fa-trash"></i></button>
                             </th>
                         </tr>
                     <?php } ?>

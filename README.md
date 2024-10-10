@@ -5,11 +5,11 @@ Este projeto é um exemplo de uma aplicação CRUD simples, configurada para rod
 ## Configurações Gerais
 
 ### Base URL
-A base URL foi configurada no arquivo `/app/config/` com o valor: http://localhost/umentor/public
+A base URL foi configurada no arquivo `/app/config/App.php` com o valor: http://localhost/umentor/public
 
 
 ### Rotas
-A rota principal `/` foi configurada no arquivo `/app/Routes.php` para abrir a `index` do **controller** `Crud`.
+A rota principal `/` foi configurada no arquivo `/app/config/Routes.php` para abrir a `index` do **controller** `Crud`.
 
 ### Estrutura de Pastas
 Dentro da pasta `/public`, foram criados dois diretórios responsáveis pelos arquivos de estilo e script:
@@ -27,6 +27,9 @@ Na view **crud**, além dos arquivos CSS e JS próprios do projeto, também est�
 
 ### Banco de dados
 Para armazenamento e gerenciamento dos dados utilizei o Mysql dentro da AWS
+
+# Configurações do DB 
+A conexão com o DB foi feita em `/app/config/Database.php`
 
 # Tabela criada para dados
 CREATE TABLE `app_funcionarios` (

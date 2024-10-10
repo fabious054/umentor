@@ -26,11 +26,11 @@ class Database extends Config
      */
     public array $default = [
         'DSN'          => '',
-        'hostname'     => 'localhost',
-        'username'     => '',
-        'password'     => '',
-        'database'     => '',
-        'DBDriver'     => 'MySQLi',
+        'hostname'     => 'testeumentor.c9sqcau0munq.sa-east-1.rds.amazonaws.com',
+        'username'     => 'admin',
+        'password'     => '12345678',
+        'database'     => 'umentor',
+        'DBDriver'     => 'MySQL',
         'DBPrefix'     => '',
         'pConnect'     => false,
         'DBDebug'      => true,

@@ -16,10 +16,25 @@
 <body>
     <h1>Umentor CRUD</h1>
     <section>
-        <div class="sectionHeader">
-            <h6 class="titleBox">Meus funcionários</h6>
-            <button data-bs-toggle="modal" data-bs-target="#modalFormularioFuncionario" class="addFuncionario">Adicionar</button>
-        </div>
+        <form action="<?php echo base_url("/")?>" method="get">
+            <div class="header">
+                <div class="sectionHeader">
+                    <h6 class="titleBox">Meus funcionários</h6>
+                    <button data-bs-toggle="modal" data-bs-target="#modalFormularioFuncionario" class="addFuncionario">Adicionar</button>
+                </div>
+                <div class="filtros">
+                    <input value="<?php echo $filtros && $filtros["pesquisa_texto"] && isset($filtros["pesquisa_texto"]) ? $filtros["pesquisa_texto"] : "" ?>" name="pesquisa_texto" type="text" class="form-control" id="busca" placeholder="Buscar funcionário por nome e email">
+                    <select name="situacao" class="form-control">
+                        <option value="">Selecione</option>
+                        <option <?php echo $filtros && isset($filtros["situacao"]) && $filtros["situacao"] == "contratado" ? "selected" : ""  ?> value="contratado">Contratado</option>
+                        <option <?php echo $filtros && isset($filtros["situacao"]) && $filtros["situacao"] == "demitido" ? "selected" : ""  ?> value="demitido">Demitido</option>
+                        <option <?php echo $filtros && isset($filtros["situacao"]) && $filtros["situacao"] == "em_teste" ? "selected" : ""  ?> value="em_teste">Em teste</option>
+                    </select>
+                    <a href="<?php echo base_url("/") ?>" class="btn btn-outline-danger">Limpar</a>
+                    <button type="submit"id="btnBuscar" class="btn btn-primary">Buscar</button>
+                </div>
+            </div>
+        </form>
         <?php if ($data && !empty($data) ) { ?>
             <table>
                 <thead>
@@ -78,18 +93,19 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <input type="hidden" class="form-control" id="id" name="id" required>
+                    <input type="hidden" class="form-control" id="id" name="id" >
                         <div class="mb-3">
                             <label for="nome" class="form-label">Nome</label>
-                            <input type="text" class="form-control" id="nome" name="nome" required>
+                            <input type="text" class="form-control" id="nome" name="nome" >
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
+                            <input type="email" class="form-control" id="email" name="email" >
                         </div>
                         <div class="mb-3">
                             <label for="situacao" class="form-label">Situação</label>
-                            <select class="form-select" id="situacao" name="situacao" required>
+                            <select class="form-select" id="situacao" name="situacao" >
+                                <option value="">Selecione</option>
                                 <option value="contratado">Contratado</option>
                                 <option value="demitido">Demitido</option>
                                 <option value="em_teste">Em teste</option>
@@ -97,7 +113,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="admitido_em" class="form-label">Data Admissão</label>
-                            <input type="date" class="form-control" id="admitido_em" name="admitido_em" required>
+                            <input type="date" class="form-control" id="admitido_em" name="admitido_em" >
                         </div>
                 </div>
                 <div class="modal-footer">

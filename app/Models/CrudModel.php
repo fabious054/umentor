@@ -9,11 +9,21 @@ class CrudModel extends Model
 {
      public $table = 'app_funcionarios';
     
-    public function get()
+    public function get($filtros = [])
     {
-         $builder = $this->db->table($this->table);
-         $query = $builder->get();
-         return $query->getResult();  
+     $builder = $this->db->table($this->table);
+     if (!empty($filtros['pesquisa_texto'])) {
+          $builder->groupStart()  // Agrupa as condições para evitar conflito com outras cláusulas
+                  ->like('nome', "%".$filtros['pesquisa_texto']."%")
+                  ->orLike('email', "%".$filtros['pesquisa_texto']."%")
+                  ->groupEnd();
+      }
+     if (!empty($filtros['situacao'])) {
+         $builder->where('situacao', $filtros['situacao']);  // Aplica a condição exata para o campo 'situacao'
+     }
+
+     $query = $builder->get();
+     return $query->getResult();  
     }
 
     public function getById($id)

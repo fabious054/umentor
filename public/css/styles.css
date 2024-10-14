@@ -21,6 +21,7 @@ body{
 
 body h1{
     margin-bottom: 1rem;
+    color: #fff;
 }
 
 body section{
@@ -32,7 +33,17 @@ body section{
 
 }
 
-body section .sectionHeader{
+body section .header {
+    
+}
+body section .header .filtros {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+body section .header .sectionHeader{
     width: 100%;
     padding: 1rem;
     border-top-left-radius: 1rem;
@@ -42,11 +53,11 @@ body section .sectionHeader{
     align-items: center;
 }
 
-body section .sectionHeader h6{
+body section .header .sectionHeader h6{
     font-size: 1.5rem;
 }
 
-body section .sectionHeader .addFuncionario{
+body section .header .sectionHeader .addFuncionario{
     padding: .3rem 1rem;
     background-color: #FC5B8E;
     color: #FFF;
@@ -56,7 +67,7 @@ body section .sectionHeader .addFuncionario{
     transition: all ease .3s;
 }
 
-body section .sectionHeader .addFuncionario:hover{
+body section .header .sectionHeader .addFuncionario:hover{
     background-color: #FF6D9E;
 }
 

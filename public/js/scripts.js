@@ -61,11 +61,46 @@ const formSubmit = () => {
       let url = form.attr("action");
 
       let id = $('input[name="id"]').val();
-      
       let nome = $('input[name="nome"]').val();
       let email = $('input[name="email"]').val();
       let situacao = $('select[name="situacao"]').val();
       let admissao = $('input[name="admitido_em"]').val();
+
+      if(!nome ){
+         $('input[name="nome"]').addClass("border border-danger");
+         setTimeout(() => {
+            $('input[name="nome"]').removeClass("border border-danger");
+         }, 3000);
+
+         notifications(false,"O campo nome é obrigatório!");
+      }
+      if(!email ){
+         $('input[name="email"]').addClass("border border-danger");
+         setTimeout(() => {
+            $('input[name="email"]').removeClass("border border-danger");
+         }, 3000);
+
+         notifications(false,"O campo email é obrigatório!");
+      }
+      if(!situacao ){
+         $('input[select="situacao"]').addClass("border border-danger");
+         setTimeout(() => {
+            $('input[select="situacao"]').removeClass("border border-danger");
+         }, 3000);
+
+         notifications(false,"O campo situação é obrigatório!");
+      }
+      if(!admissao ){
+         $('input[name="admitido_em"]').addClass("border border-danger");
+         setTimeout(() => {
+            $('input[name="admitido_em"]').removeClass("border border-danger");
+         }, 3000);
+         notifications(false,"O campo admissão é obrigatório!");
+      }
+
+      if(!nome || !email || !situacao || !admissao){
+         return false;
+      }
       
       if(id){
          url = `${url}editar`;

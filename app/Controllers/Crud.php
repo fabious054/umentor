@@ -9,9 +9,17 @@ class Crud extends BaseController
     public function index(): string
     {
         $model = new CrudModel();
-        $data = $model->get();
+        $filtros = $_GET;
+    
+        $filtrar_por = [
+            "pesquisa_texto" => (isset($filtros["pesquisa_texto"]) && !empty($filtros["pesquisa_texto"])) ? $filtros["pesquisa_texto"] : false,
+            "situacao" => (isset($filtros["situacao"]) && !empty($filtros["situacao"])) ? $filtros["situacao"] : false,
+        ];
+
+        $data = $model->get($filtrar_por);
         return view("crud", [
-            "data"=> $data
+            "data"=> $data,
+            "filtros"=> $filtrar_por
             ]);
     }
 

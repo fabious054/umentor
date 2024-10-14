@@ -4,8 +4,8 @@ const editar = () => {
       let id = $(this).data("id");
       $('input[name="id"]').val(id);
       let tr = $(this).closest("tr");
-      $(tr).remove();
       preecherForm(id);
+      $(tr).remove();
 
    });
 };
@@ -13,8 +13,23 @@ const editar = () => {
 const deletar = () => {
    $(".btnExcluir").on("click", function (e) {
       e.preventDefault();
+
+      const site_url = document.querySelector('meta[name="site_url"]').content;
       let id = $(this).data("id");
-      notifications(true,"Funcionário excluído com sucesso!");
+      let url = `${site_url}deletar?id=${id}`;
+      let tr = $(this).closest("tr");
+      $.ajax({
+         type: "GET",
+         url: url,
+         dataType: "json",
+         success: function (response) {
+            notifications(response.status,response.msg);
+            $(tr).remove();
+         },
+         error: function (jqXHR, textStatus, errorThrown) {
+            console.error("Erro na requisição: ", textStatus, errorThrown);
+         },
+      });
    });
 };
 
@@ -145,6 +160,7 @@ const formSubmit = () => {
             }
             
             notifications(response.status,response.msg);
+            $("#modalFormularioFuncionario").modal("hide");
             let tr = `<tr>
                         <td>${data.id}</td>
                         <td>${data.nome}</td>
@@ -152,9 +168,9 @@ const formSubmit = () => {
                         <td>
                            <span class="${spanClass}">${spanTxt}</span>
                         </td>
-                        <td>${data.admitido_em}</td>
-                        <td>${data.criado_em}</td>
-                        <td>${data.ultima_atualizacao}</td>
+                        <td>${formataData(data.admitido_em)}</td>
+                        <td>${formataData(data.criado_em)}</td>
+                        <td>${formataData(data.ultima_atualizacao)}</td>
                         <td>
                            <button data-bs-toggle="modal" data-bs-target="#modalFormularioFuncionario" class="btn btn-primary btnEditar" data-id="${id}"><i class="fa-solid fa-pen-to-square"></i></button>
                            <button class="btn btn-danger btnExcluir" data-id="${id}"><i class="fa-solid fa-trash"></i></button>
@@ -168,6 +184,12 @@ const formSubmit = () => {
       });
    });
 };
+
+const formataData = (data) => {
+   //recebe a data no formato yyyy-mm-dd e retorna no formato dd/mm/yyyy
+   let dataFormatada = data.split("-");
+   return `${dataFormatada[2]}/${dataFormatada[1]}/${dataFormatada[0]}`;
+}
 
 const notifications = (status,mensagem) => {
    const Toast = Swal.mixin({

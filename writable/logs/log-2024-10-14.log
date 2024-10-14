@@ -1,312 +1,214 @@
-CRITICAL - 2024-10-14 15:33:56 --> ArgumentCountError: Too few arguments to function App\Controllers\Crud::buscar(), 0 passed in C:\xampp\htdocs\umentor\system\CodeIgniter.php on line 933 and exactly 1 expected
-[Method: GET, Route: buscar/10]
-in APPPATH\Controllers\Crud.php on line 58.
- 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->buscar()
- 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
- 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
- 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
- 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-CRITICAL - 2024-10-14 17:57:24 --> ArgumentCountError: Too few arguments to function App\Controllers\Crud::buscar(), 0 passed in C:\xampp\htdocs\umentor\system\CodeIgniter.php on line 933 and exactly 1 expected
-[Method: GET, Route: buscar/28]
-in APPPATH\Controllers\Crud.php on line 58.
- 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->buscar()
- 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
- 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
- 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
- 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-CRITICAL - 2024-10-14 18:03:06 --> ArgumentCountError: Too few arguments to function App\Controllers\Crud::buscar(), 0 passed in C:\xampp\htdocs\umentor\system\CodeIgniter.php on line 933 and exactly 1 expected
-[Method: GET, Route: buscar/10]
-in APPPATH\Controllers\Crud.php on line 58.
- 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->buscar()
- 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
- 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
- 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
- 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-CRITICAL - 2024-10-14 18:03:12 --> ArgumentCountError: Too few arguments to function App\Controllers\Crud::buscar(), 0 passed in C:\xampp\htdocs\umentor\system\CodeIgniter.php on line 933 and exactly 1 expected
-[Method: GET, Route: buscar/10]
-in APPPATH\Controllers\Crud.php on line 58.
- 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->buscar()
- 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
- 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
- 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
- 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-CRITICAL - 2024-10-14 18:45:31 --> ErrorException: Undefined array key "nome"
-[Method: GET, Route: /]
-in APPPATH\Controllers\Crud.php on line 15.
- 1 APPPATH\Controllers\Crud.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nome"', 'C:\\xampp\\htdocs\\umentor\\app\\Controllers\\Crud.php', 15)
- 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->index()
+CRITICAL - 2024-10-14 19:18:26 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: deletar]
+in APPPATH\Controllers\Crud.php on line 85.
+ 1 APPPATH\Controllers\Crud.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\umentor\\app\\Controllers\\Crud.php', 85)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->deletar()
  3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
  4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-CRITICAL - 2024-10-14 18:45:37 --> ErrorException: Undefined array key "nome"
+ERROR - 2024-10-14 19:33:13 --> mysqli_sql_exception: Unknown column 'fltroSituacao' in 'where clause' in C:\xampp\htdocs\umentor\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\umentor\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\umentor\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\umentor\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\umentor\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\umentor\app\Models\CrudModel.php(25): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\umentor\app\Controllers\Crud.php(19): App\Models\CrudModel->get(Array)
+#6 C:\xampp\htdocs\umentor\system\CodeIgniter.php(933): App\Controllers\Crud->index()
+#7 C:\xampp\htdocs\umentor\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+#8 C:\xampp\htdocs\umentor\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\umentor\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\umentor\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\umentor\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-10-14 19:33:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'fltroSituacao' in 'where clause'
 [Method: GET, Route: /]
-in APPPATH\Controllers\Crud.php on line 15.
- 1 APPPATH\Controllers\Crud.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nome"', 'C:\\xampp\\htdocs\\umentor\\app\\Controllers\\Crud.php', 15)
- 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->index()
- 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
- 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
- 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
- 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-CRITICAL - 2024-10-14 18:46:02 --> ErrorException: Undefined array key "nome"
-[Method: GET, Route: /]
-in APPPATH\Controllers\Crud.php on line 15.
- 1 APPPATH\Controllers\Crud.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nome"', 'C:\\xampp\\htdocs\\umentor\\app\\Controllers\\Crud.php', 15)
- 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->index()
- 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
- 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
- 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
- 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-CRITICAL - 2024-10-14 18:46:08 --> ErrorException: Undefined variable $filtros
-[Method: GET, Route: /]
-in APPPATH\Controllers\Crud.php on line 15.
- 1 APPPATH\Controllers\Crud.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $filtros', 'C:\\xampp\\htdocs\\umentor\\app\\Controllers\\Crud.php', 15)
- 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->index()
- 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
- 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
- 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
- 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-CRITICAL - 2024-10-14 18:46:33 --> ErrorException: Undefined array key "nome"
-[Method: GET, Route: /]
-in APPPATH\Controllers\Crud.php on line 15.
- 1 APPPATH\Controllers\Crud.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nome"', 'C:\\xampp\\htdocs\\umentor\\app\\Controllers\\Crud.php', 15)
- 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->index()
- 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
- 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
- 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
- 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-CRITICAL - 2024-10-14 18:47:37 --> ErrorException: Undefined array key "nome"
-[Method: GET, Route: /]
-in APPPATH\Controllers\Crud.php on line 15.
- 1 APPPATH\Controllers\Crud.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nome"', 'C:\\xampp\\htdocs\\umentor\\app\\Controllers\\Crud.php', 15)
- 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->index()
- 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
- 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
- 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
- 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-CRITICAL - 2024-10-14 18:47:53 --> ErrorException: Undefined array key "nome"
-[Method: GET, Route: /]
-in APPPATH\Controllers\Crud.php on line 15.
- 1 APPPATH\Controllers\Crud.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nome"', 'C:\\xampp\\htdocs\\umentor\\app\\Controllers\\Crud.php', 15)
- 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->index()
- 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
- 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
- 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
- 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-CRITICAL - 2024-10-14 18:47:54 --> ErrorException: Undefined array key "nome"
-[Method: GET, Route: /]
-in APPPATH\Controllers\Crud.php on line 15.
- 1 APPPATH\Controllers\Crud.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nome"', 'C:\\xampp\\htdocs\\umentor\\app\\Controllers\\Crud.php', 15)
- 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->index()
- 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
- 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
- 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
- 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-CRITICAL - 2024-10-14 18:47:54 --> ErrorException: Undefined array key "nome"
-[Method: GET, Route: /]
-in APPPATH\Controllers\Crud.php on line 15.
- 1 APPPATH\Controllers\Crud.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nome"', 'C:\\xampp\\htdocs\\umentor\\app\\Controllers\\Crud.php', 15)
- 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->index()
- 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
- 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
- 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
- 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-CRITICAL - 2024-10-14 18:48:50 --> ParseError: syntax error, unexpected token ";"
-[Method: GET, Route: /]
-in APPPATH\Controllers\Crud.php on line 19.
- 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\umentor\\app\\Controllers\\Crud.php')
- 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Crud')
- 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Crud')
- 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\Crud', true)
- 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `app_funcionarios`
+WHERE   (
+`nome` LIKE :nome: ESCAPE \'!\'
+OR  `email` LIKE :email: ESCAPE \'!\'
+ )
+AND `fltroSituacao` = :fltroSituacao:', [...], false)
+ 2 APPPATH\Models\CrudModel.php(25): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Crud.php(19): App\Models\CrudModel->get([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
  6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-CRITICAL - 2024-10-14 18:48:51 --> ParseError: syntax error, unexpected token ";"
-[Method: GET, Route: /]
-in APPPATH\Controllers\Crud.php on line 19.
- 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\umentor\\app\\Controllers\\Crud.php')
- 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Crud')
- 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Crud')
- 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\Crud', true)
- 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
- 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
- 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
- 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-CRITICAL - 2024-10-14 18:48:51 --> ParseError: syntax error, unexpected token ";"
-[Method: GET, Route: /]
-in APPPATH\Controllers\Crud.php on line 19.
- 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\umentor\\app\\Controllers\\Crud.php')
- 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Crud')
- 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Crud')
- 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\Crud', true)
- 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
- 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
- 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
- 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-CRITICAL - 2024-10-14 18:49:03 --> ErrorException: Undefined array key "nome"
-[Method: GET, Route: /]
-in APPPATH\Controllers\Crud.php on line 13.
- 1 APPPATH\Controllers\Crud.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nome"', 'C:\\xampp\\htdocs\\umentor\\app\\Controllers\\Crud.php', 13)
- 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->index()
- 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
- 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
- 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
- 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-CRITICAL - 2024-10-14 18:49:04 --> ErrorException: Undefined array key "nome"
-[Method: GET, Route: /]
-in APPPATH\Controllers\Crud.php on line 13.
- 1 APPPATH\Controllers\Crud.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nome"', 'C:\\xampp\\htdocs\\umentor\\app\\Controllers\\Crud.php', 13)
- 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->index()
- 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
- 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
- 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
- 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-CRITICAL - 2024-10-14 18:49:09 --> ErrorException: Undefined array key "nome"
-[Method: GET, Route: /]
-in APPPATH\Controllers\Crud.php on line 13.
- 1 APPPATH\Controllers\Crud.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nome"', 'C:\\xampp\\htdocs\\umentor\\app\\Controllers\\Crud.php', 13)
- 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->index()
- 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
- 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
- 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
- 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-CRITICAL - 2024-10-14 18:49:24 --> ErrorException: Undefined array key "nome"
-[Method: GET, Route: /]
-in APPPATH\Controllers\Crud.php on line 15.
- 1 APPPATH\Controllers\Crud.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nome"', 'C:\\xampp\\htdocs\\umentor\\app\\Controllers\\Crud.php', 15)
- 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->index()
- 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
- 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
- 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
- 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-CRITICAL - 2024-10-14 18:49:46 --> ErrorException: Undefined variable $filtrar_por
-[Method: GET, Route: /]
-in APPPATH\Controllers\Crud.php on line 22.
- 1 APPPATH\Controllers\Crud.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $filtrar_por', 'C:\\xampp\\htdocs\\umentor\\app\\Controllers\\Crud.php', 22)
- 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->index()
- 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
- 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
- 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
- 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-CRITICAL - 2024-10-14 18:50:03 --> ErrorException: Undefined array key "nome"
-[Method: GET, Route: /]
-in APPPATH\Controllers\Crud.php on line 16.
- 1 APPPATH\Controllers\Crud.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nome"', 'C:\\xampp\\htdocs\\umentor\\app\\Controllers\\Crud.php', 16)
- 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->index()
- 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
- 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
- 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
- 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-CRITICAL - 2024-10-14 18:50:08 --> ErrorException: Undefined array key "nome"
-[Method: GET, Route: /]
-in APPPATH\Controllers\Crud.php on line 16.
- 1 APPPATH\Controllers\Crud.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nome"', 'C:\\xampp\\htdocs\\umentor\\app\\Controllers\\Crud.php', 16)
- 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->index()
- 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
- 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
- 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
- 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-CRITICAL - 2024-10-14 18:50:09 --> ErrorException: Undefined array key "nome"
-[Method: GET, Route: /]
-in APPPATH\Controllers\Crud.php on line 16.
- 1 APPPATH\Controllers\Crud.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nome"', 'C:\\xampp\\htdocs\\umentor\\app\\Controllers\\Crud.php', 16)
- 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->index()
- 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
- 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
- 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
- 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-CRITICAL - 2024-10-14 18:50:09 --> ErrorException: Undefined array key "nome"
-[Method: GET, Route: /]
-in APPPATH\Controllers\Crud.php on line 16.
- 1 APPPATH\Controllers\Crud.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nome"', 'C:\\xampp\\htdocs\\umentor\\app\\Controllers\\Crud.php', 16)
- 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->index()
- 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
- 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
- 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
- 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-CRITICAL - 2024-10-14 18:50:10 --> ErrorException: Undefined array key "nome"
-[Method: GET, Route: /]
-in APPPATH\Controllers\Crud.php on line 16.
- 1 APPPATH\Controllers\Crud.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nome"', 'C:\\xampp\\htdocs\\umentor\\app\\Controllers\\Crud.php', 16)
- 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->index()
- 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
- 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
- 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
- 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-CRITICAL - 2024-10-14 18:50:21 --> ErrorException: Undefined array key "nome"
-[Method: GET, Route: /]
-in APPPATH\Controllers\Crud.php on line 15.
- 1 APPPATH\Controllers\Crud.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nome"', 'C:\\xampp\\htdocs\\umentor\\app\\Controllers\\Crud.php', 15)
- 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->index()
- 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
- 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
- 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
- 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-CRITICAL - 2024-10-14 18:55:22 --> ErrorException: Undefined variable $filtros
-[Method: GET, Route: /]
-in APPPATH\Views\crud.php on line 26.
- 1 APPPATH\Views\crud.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $filtros', 'C:\\xampp\\htdocs\\umentor\\app\\Views\\crud.php', 26)
- 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\umentor\\app\\Views\\crud.php')
- 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
- 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('crud', [], true)
- 5 APPPATH\Controllers\Crud.php(20): view('crud', [...])
+CRITICAL - 2024-10-14 19:33:13 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'fltroSituacao' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `app_funcionarios`
+WHERE   (
+`nome` LIKE \'%%fabio%%\' ESCAPE \'!\'
+OR  `email` LIKE \'%%fabio%%\' ESCAPE \'!\'
+ )
+AND `fltroSituacao` = \'contratado\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `app_funcionarios`
+WHERE   (
+`nome` LIKE \'%%fabio%%\' ESCAPE \'!\'
+OR  `email` LIKE \'%%fabio%%\' ESCAPE \'!\'
+ )
+AND `fltroSituacao` = \'contratado\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `app_funcionarios`
+WHERE   (
+`nome` LIKE :nome: ESCAPE \'!\'
+OR  `email` LIKE :email: ESCAPE \'!\'
+ )
+AND `fltroSituacao` = :fltroSituacao:', [...], false)
+ 4 APPPATH\Models\CrudModel.php(25): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Crud.php(19): App\Models\CrudModel->get([...])
  6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->index()
  7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
  8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-CRITICAL - 2024-10-14 18:55:57 --> TypeError: Unsupported operand types: string & bool
+CRITICAL - 2024-10-14 19:33:13 --> [Caused by] mysqli_sql_exception: Unknown column 'fltroSituacao' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *
+FROM `app_funcionarios`
+WHERE   (
+`nome` LIKE \'%%fabio%%\' ESCAPE \'!\'
+OR  `email` LIKE \'%%fabio%%\' ESCAPE \'!\'
+ )
+AND `fltroSituacao` = \'contratado\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `app_funcionarios`
+WHERE   (
+`nome` LIKE \'%%fabio%%\' ESCAPE \'!\'
+OR  `email` LIKE \'%%fabio%%\' ESCAPE \'!\'
+ )
+AND `fltroSituacao` = \'contratado\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `app_funcionarios`
+WHERE   (
+`nome` LIKE \'%%fabio%%\' ESCAPE \'!\'
+OR  `email` LIKE \'%%fabio%%\' ESCAPE \'!\'
+ )
+AND `fltroSituacao` = \'contratado\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `app_funcionarios`
+WHERE   (
+`nome` LIKE :nome: ESCAPE \'!\'
+OR  `email` LIKE :email: ESCAPE \'!\'
+ )
+AND `fltroSituacao` = :fltroSituacao:', [...], false)
+ 5 APPPATH\Models\CrudModel.php(25): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Crud.php(19): App\Models\CrudModel->get([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-14 19:33:55 --> mysqli_sql_exception: Unknown column 'fltroSituacao' in 'where clause' in C:\xampp\htdocs\umentor\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\umentor\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\umentor\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\umentor\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\umentor\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\umentor\app\Models\CrudModel.php(25): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\umentor\app\Controllers\Crud.php(19): App\Models\CrudModel->get(Array)
+#6 C:\xampp\htdocs\umentor\system\CodeIgniter.php(933): App\Controllers\Crud->index()
+#7 C:\xampp\htdocs\umentor\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+#8 C:\xampp\htdocs\umentor\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\umentor\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\umentor\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\umentor\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-10-14 19:33:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'fltroSituacao' in 'where clause'
 [Method: GET, Route: /]
-in APPPATH\Views\crud.php on line 26.
- 1 SYSTEMPATH\View\View.php(234): include()
- 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
- 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('crud', [], true)
- 4 APPPATH\Controllers\Crud.php(20): view('crud', [...])
- 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->index()
- 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
- 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
- 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-CRITICAL - 2024-10-14 18:56:25 --> TypeError: Unsupported operand types: string & bool
-[Method: GET, Route: /]
-in APPPATH\Views\crud.php on line 26.
- 1 SYSTEMPATH\View\View.php(234): include()
- 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
- 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('crud', [], true)
- 4 APPPATH\Controllers\Crud.php(20): view('crud', [...])
- 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->index()
- 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
- 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
- 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `app_funcionarios`
+WHERE   (
+`nome` LIKE :nome: ESCAPE \'!\'
+OR  `email` LIKE :email: ESCAPE \'!\'
+ )
+AND `fltroSituacao` = :fltroSituacao:', [...], false)
+ 2 APPPATH\Models\CrudModel.php(25): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Crud.php(19): App\Models\CrudModel->get([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-14 19:33:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'fltroSituacao' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `app_funcionarios`
+WHERE   (
+`nome` LIKE \'%%fabio%%\' ESCAPE \'!\'
+OR  `email` LIKE \'%%fabio%%\' ESCAPE \'!\'
+ )
+AND `fltroSituacao` = \'contratado\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `app_funcionarios`
+WHERE   (
+`nome` LIKE \'%%fabio%%\' ESCAPE \'!\'
+OR  `email` LIKE \'%%fabio%%\' ESCAPE \'!\'
+ )
+AND `fltroSituacao` = \'contratado\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `app_funcionarios`
+WHERE   (
+`nome` LIKE :nome: ESCAPE \'!\'
+OR  `email` LIKE :email: ESCAPE \'!\'
+ )
+AND `fltroSituacao` = :fltroSituacao:', [...], false)
+ 4 APPPATH\Models\CrudModel.php(25): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Crud.php(19): App\Models\CrudModel->get([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-14 19:33:55 --> [Caused by] mysqli_sql_exception: Unknown column 'fltroSituacao' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *
+FROM `app_funcionarios`
+WHERE   (
+`nome` LIKE \'%%fabio%%\' ESCAPE \'!\'
+OR  `email` LIKE \'%%fabio%%\' ESCAPE \'!\'
+ )
+AND `fltroSituacao` = \'contratado\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `app_funcionarios`
+WHERE   (
+`nome` LIKE \'%%fabio%%\' ESCAPE \'!\'
+OR  `email` LIKE \'%%fabio%%\' ESCAPE \'!\'
+ )
+AND `fltroSituacao` = \'contratado\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `app_funcionarios`
+WHERE   (
+`nome` LIKE \'%%fabio%%\' ESCAPE \'!\'
+OR  `email` LIKE \'%%fabio%%\' ESCAPE \'!\'
+ )
+AND `fltroSituacao` = \'contratado\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `app_funcionarios`
+WHERE   (
+`nome` LIKE :nome: ESCAPE \'!\'
+OR  `email` LIKE :email: ESCAPE \'!\'
+ )
+AND `fltroSituacao` = :fltroSituacao:', [...], false)
+ 5 APPPATH\Models\CrudModel.php(25): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Crud.php(19): App\Models\CrudModel->get([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

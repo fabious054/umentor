@@ -13,13 +13,13 @@ class CrudModel extends Model
     {
      $builder = $this->db->table($this->table);
      if (!empty($filtros['pesquisa_texto'])) {
-          $builder->groupStart()  // Agrupa as condições para evitar conflito com outras cláusulas
+          $builder->groupStart() 
                   ->like('nome', "%".$filtros['pesquisa_texto']."%")
                   ->orLike('email', "%".$filtros['pesquisa_texto']."%")
                   ->groupEnd();
       }
-     if (!empty($filtros['situacao'])) {
-         $builder->where('situacao', $filtros['situacao']);  // Aplica a condição exata para o campo 'situacao'
+     if (!empty($filtros['fltroSituacao'])) {
+         $builder->where('situacao', $filtros['fltroSituacao']);
      }
 
      $query = $builder->get();
@@ -53,6 +53,23 @@ class CrudModel extends Model
      } else {
           return false;
      }
+    }
+
+    public function deletar($id)
+    {
+
+     $builder = $this->db->table($this->table);
+    
+         $builder->where('id', $id);
+         $builder->delete();
+         
+         if ($this->db->affectedRows() > 0) {
+             return true;  
+         } else {
+             return false;
+         }
+ 
+
     }
 
 }

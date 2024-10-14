@@ -24,11 +24,11 @@
                 </div>
                 <div class="filtros">
                     <input value="<?php echo $filtros && $filtros["pesquisa_texto"] && isset($filtros["pesquisa_texto"]) ? $filtros["pesquisa_texto"] : "" ?>" name="pesquisa_texto" type="text" class="form-control" id="busca" placeholder="Buscar funcionário por nome e email">
-                    <select name="situacao" class="form-control">
+                    <select name="fltroSituacao" class="form-control">
                         <option value="">Selecione</option>
-                        <option <?php echo $filtros && isset($filtros["situacao"]) && $filtros["situacao"] == "contratado" ? "selected" : ""  ?> value="contratado">Contratado</option>
-                        <option <?php echo $filtros && isset($filtros["situacao"]) && $filtros["situacao"] == "demitido" ? "selected" : ""  ?> value="demitido">Demitido</option>
-                        <option <?php echo $filtros && isset($filtros["situacao"]) && $filtros["situacao"] == "em_teste" ? "selected" : ""  ?> value="em_teste">Em teste</option>
+                        <option <?php echo $filtros && isset($filtros["fltroSituacao"]) && $filtros["fltroSituacao"] == "contratado" ? "selected" : ""  ?> value="contratado">Contratado</option>
+                        <option <?php echo $filtros && isset($filtros["fltroSituacao"]) && $filtros["fltroSituacao"] == "demitido" ? "selected" : ""  ?> value="demitido">Demitido</option>
+                        <option <?php echo $filtros && isset($filtros["fltroSituacao"]) && $filtros["fltroSituacao"] == "em_teste" ? "selected" : ""  ?> value="em_teste">Em teste</option>
                     </select>
                     <a href="<?php echo base_url("/") ?>" class="btn btn-outline-danger">Limpar</a>
                     <button type="submit"id="btnBuscar" class="btn btn-primary">Buscar</button>
@@ -64,9 +64,15 @@
                                 } 
                                   ?>
                             </td>
-                            <td><?php echo ($funcionario->admitido_em) ? $funcionario->admitido_em : date("d/m/Y")  ?></td>
-                            <td><?php echo ($funcionario->criado_em) ? $funcionario->criado_em : date("d/m/Y")  ?></td>
-                            <td><?php echo ($funcionario->ultima_atualizacao) ? $funcionario->ultima_atualizacao : date("d/m/Y")  ?></td>
+                            <td>
+                                <?php echo ($funcionario->admitido_em) ? date("d/m/Y", strtotime($funcionario->admitido_em)) : date("d/m/Y"); ?>
+                            </td>
+                            <td>
+                                <?php echo ($funcionario->criado_em) ? date("d/m/Y", strtotime($funcionario->criado_em)) : date("d/m/Y"); ?>
+                            </td>
+                            <td>
+                            <?php echo ($funcionario->ultima_atualizacao) ? date("d/m/Y", strtotime($funcionario->ultima_atualizacao)) : date("d/m/Y"); ?>
+                            </td>
                             <th>
                                 <button data-id="<?php echo $funcionario->id ?>" data-bs-toggle="modal" data-bs-target="#modalFormularioFuncionario" class="btn btn-primary btnEditar"><i class="fa-solid fa-pen-to-square"></i></button>
                                 <button data-id="<?php echo $funcionario->id ?>" class="btn btn-danger btnExcluir"><i class="fa-solid fa-trash"></i></button>
@@ -96,11 +102,11 @@
                     <input type="hidden" class="form-control" id="id" name="id" >
                         <div class="mb-3">
                             <label for="nome" class="form-label">Nome</label>
-                            <input type="text" class="form-control" id="nome" name="nome" >
+                            <input placeholder="Nome do funcionário" type="text" class="form-control" id="nome" name="nome" >
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" name="email" >
+                            <input placeholder="E-mail do funcionário" type="email" class="form-control" id="email" name="email" >
                         </div>
                         <div class="mb-3">
                             <label for="situacao" class="form-label">Situação</label>

@@ -13,6 +13,7 @@ A rota principal `/` foi configurada no arquivo `/app/config/Routes.php` para ab
 A rota adicionar `/adicionar` foi configurada no arquivo `/app/config/Routes.php` para abrir a `adicionar` do **controller** `Crud` como um POST.
 A rota editar `/editar` foi configurada no arquivo `/app/config/Routes.php` para abrir a `editar` do **controller** `Crud` como um POST.
 A rota buscar `/buscar` foi configurada no arquivo `/app/config/Routes.php` para abrir a `buscar` do **controller** `Crud` como um GET.
+A rota deletar `/deletar` foi configurada no arquivo `/app/config/Routes.php` para abrir a `deletar` do **controller** `Crud` como um GET.
 
 ### Estrutura de Pastas
 Dentro da pasta `/public`, foram criados dois diretórios responsáveis pelos arquivos de estilo e script:

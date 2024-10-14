@@ -13,7 +13,7 @@ class Crud extends BaseController
     
         $filtrar_por = [
             "pesquisa_texto" => (isset($filtros["pesquisa_texto"]) && !empty($filtros["pesquisa_texto"])) ? $filtros["pesquisa_texto"] : false,
-            "situacao" => (isset($filtros["situacao"]) && !empty($filtros["situacao"])) ? $filtros["situacao"] : false,
+            "fltroSituacao" => (isset($filtros["fltroSituacao"]) && !empty($filtros["fltroSituacao"])) ? $filtros["fltroSituacao"] : false,
         ];
 
         $data = $model->get($filtrar_por);
@@ -75,6 +75,26 @@ class Crud extends BaseController
             Funcionário não encontrado"]);
         }else{
             return json_encode(["status"=>true,"msg"=> "Funcionário encontrado","data"=>$data]);
+        }
+
+    }
+
+    public function deletar()
+    {
+        $model = new CrudModel();
+        $id = isset($_GET["id"]) ? $_GET["id"] : false;
+
+        if(!$id){
+            return json_encode(["status"=>false,"msg"=> "ID do funcionário não informado"]);
+        }
+
+        $data = $model->deletar($id);
+        
+        if(!$data){
+            return json_encode(["status"=>false,"msg"=> "
+            Não foi possível deletar o funcionário"]);
+        }else{
+            return json_encode(["status"=>true,"msg"=> "Funcionário deletado com sucesso"]);
         }
 
     }

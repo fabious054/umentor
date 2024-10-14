@@ -10,6 +10,8 @@ A base URL foi configurada no arquivo `/app/config/App.php` com o valor: http://
 
 ### Rotas
 A rota principal `/` foi configurada no arquivo `/app/config/Routes.php` para abrir a `index` do **controller** `Crud`.
+A rota adicionar `/adicionar` foi configurada no arquivo `/app/config/Routes.php` para abrir a `adicionar` do **controller** `Crud` como um POST.
+A rota editar `/editar` foi configurada no arquivo `/app/config/Routes.php` para abrir a `editar` do **controller** `Crud` como um POST.
 
 ### Estrutura de Pastas
 Dentro da pasta `/public`, foram criados dois diretórios responsáveis pelos arquivos de estilo e script:
@@ -18,12 +20,19 @@ Dentro da pasta `/public`, foram criados dois diretórios responsáveis pelos ar
 - **/public/css**: Para armazenar os arquivos CSS do projeto.
 
 ### Dependências Externas
-Na view **crud**, além dos arquivos CSS e JS próprios do projeto, também está sendo carregado o **jQuery** via CDN e também o FontAwesome para icones. 
-
+Na view **crud**, além dos arquivos CSS e JS próprios do projeto, também estão sendo carregados o **jQuery** via CDN, o **Bootstrap** para estilização e componentes, o **SweetAlert** para alertas e o **FontAwesome** para ícones.
 
 ```html
+**Font-Awesome**
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+**JQUERY**
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-KyZXEAg3QhqLMpG8r+8fhAXLRlI/hChmWw5r3HXbVRs=" crossorigin="anonymous"></script>
+**Boostrap**
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+**SweetAlert**
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.3/dist/sweetalert2.all.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.3/dist/sweetalert2.min.css" rel="stylesheet">
 ```
 
 ### Banco de dados

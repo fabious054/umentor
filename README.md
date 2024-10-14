@@ -12,6 +12,7 @@ A base URL foi configurada no arquivo `/app/config/App.php` com o valor: http://
 A rota principal `/` foi configurada no arquivo `/app/config/Routes.php` para abrir a `index` do **controller** `Crud`.
 A rota adicionar `/adicionar` foi configurada no arquivo `/app/config/Routes.php` para abrir a `adicionar` do **controller** `Crud` como um POST.
 A rota editar `/editar` foi configurada no arquivo `/app/config/Routes.php` para abrir a `editar` do **controller** `Crud` como um POST.
+A rota buscar `/buscar` foi configurada no arquivo `/app/config/Routes.php` para abrir a `buscar` do **controller** `Crud` como um GET.
 
 ### Estrutura de Pastas
 Dentro da pasta `/public`, foram criados dois diretórios responsáveis pelos arquivos de estilo e script:
